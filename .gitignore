@@ -1,0 +1,8 @@
+# Large media files
+*.mp4
+*.avi
+*.gif
+*.pt
+
+# Temp files
+~$*
