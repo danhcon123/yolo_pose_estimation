@@ -7,7 +7,7 @@ device = 0 if torch.cuda.is_available() else "cpu"
 
 print("Running on:", "GPU" if device == 0 else "CPU")
 
-result = model.predict(source="dance_2.mp4", stream=True, device=device)
+result = model.predict(source="dance_1.mp4", stream=True, device=device)
 print(f"Result: {result}")
 
 for r in result:
