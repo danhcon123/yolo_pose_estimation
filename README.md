@@ -4,16 +4,16 @@ Human pose estimation using [YOLOv26](https://docs.ultralytics.com/) on video in
 
 ## Scripts
 
-| File | Description |
-|---|---|
-| `yolo_pose.py` | Run pose estimation with live OpenCV window preview |
+| File                    | Description                                                                   |
+| ----------------------- | ----------------------------------------------------------------------------- |
+| `yolo_pose.py`        | Run pose estimation with live OpenCV window preview                           |
 | `yolo_pose_output.py` | Run pose estimation and print detailed per-frame keypoint/box data to console |
-| `obb.py` | Oriented bounding box inference |
+| `obb.py`              | Oriented bounding box inference                                               |
 
 ## Requirements
 
 ```bash
-pip install ultralytics opencv-python
+pip install -r requirements.txt
 ```
 
 ## Usage
@@ -39,6 +39,7 @@ Prints bounding boxes, keypoints (xy, normalized, confidence), and a summary for
 See [COMMAND.md](COMMAND.md) for full Docker instructions using the Ultralytics image.
 
 **GPU (NVIDIA):**
+
 ```bash
 docker run --rm --gpus all -v "${PWD}:/workspace" -w /workspace \
   ultralytics/ultralytics:latest \
@@ -47,6 +48,7 @@ docker run --rm --gpus all -v "${PWD}:/workspace" -w /workspace \
 ```
 
 **CPU:**
+
 ```bash
 docker run --rm -v "${PWD}:/workspace" -w /workspace \
   ultralytics/ultralytics:latest-cpu \
