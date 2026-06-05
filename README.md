@@ -70,3 +70,7 @@ yolo_pose_estimation/
 ├── docu/                  # Assignment and presentation files
 └── publication/           # Reference papers
 ```
+
+## Dataset
+
+https://universe.roboflow.com/projects-j3mmn/key-point-annotation-fd2qv/browse?queryText=&pageSize=50&startingIndex=0&browseQuery=true

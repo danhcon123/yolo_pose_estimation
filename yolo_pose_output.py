@@ -6,7 +6,7 @@ model = YOLO("yolo26n-pose.pt")
 device = 0 if torch.cuda.is_available() else "cpu"
 
 results = model.predict(
-    source="dance_2.mp4",
+    source="input\dance_2.mp4",
     stream=True,
     device=device,
     verbose=False
@@ -55,7 +55,7 @@ for frame_id, r in enumerate(results):
         print(r.keypoints.xyn.cpu().numpy())
 
         if r.keypoints.conf is not None:
-            print("Keypoint confidence:")
+            print("Keypoint visibility:")
             print(r.keypoints.conf.cpu().numpy())
 
     # Masks, only relevant for segmentation models
@@ -77,6 +77,9 @@ for frame_id, r in enumerate(results):
     print("\n--- SUMMARY ---")
     print(r.summary())
 
+    # Show frame with detections
+    r.show()
+
     # Stop early for testing
-    if frame_id == 2:
+    if frame_id == 0:
         break
