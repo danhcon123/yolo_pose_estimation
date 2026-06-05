@@ -1,6 +1,6 @@
 # Inference with Docker
 
-## NVIDIA 
+## NVIDIA
 
 Requirements
 Window, Docker Desktop, Ultralytics Docker image, NVIDIA GPU + NVIDIA Docker/GPU support only if using GPU inference
@@ -10,6 +10,7 @@ docker pull ultralytics/ultralytics:latest
 ```
 
 Folder structure
+
 ```
 my_yolo_project/
 │
@@ -20,19 +21,19 @@ my_yolo_project/
         └── ... saved prediction video after inference
 ```
 
-
 Check NVIDIA GPU Inside Docker
+
 ```
 docker run --rm --gpus all ultralytics/ultralytics:latest nvidia-smi
 ```
 
-
 Predict (Pose Estimation) with Docker
-```        
+
+```
 # Open folder
 cd C:\Users\YourName\Desktop\my_yolo_project
 
-# Inference with NVIDIA                                           
+# Inference with NVIDIA                                         
 docker run --rm --gpus all -v "${PWD}:/workspace" -w /workspace ultralytics/ultralytics:latest yolo pose predict model=yolo26n-pose.pt source=1.mp4 project=/workspace/output name=result exist_ok=True save=True show=False
 
 # Open saved video folder
@@ -43,12 +44,12 @@ explorer .\output\result
 
 ## CPU
 
-Requirements  
+Requirements
 Windows, Docker Desktop, Ultralytics Docker CPU image
 
 ```bash
 docker pull ultralytics/ultralytics:latest-cpu
-````
+```
 
 Predict with CPU
 
@@ -62,7 +63,9 @@ docker run --rm -v "${PWD}:/workspace" -w /workspace ultralytics/ultralytics:lat
 # Open saved video folder
 explorer .\output\result
 ```
+
 Folder structure
+
 ```text
 my_yolo_project/
 │
@@ -71,4 +74,13 @@ my_yolo_project/
 └── output/
     └── result/
         └── ... saved prediction video after inference
+```
+
+
+## Command
+
+Convert in Onnx command:
+
+```yolo
+yolo export model=yolo26n-pose.pt format=onnx imgsz=640
 ```

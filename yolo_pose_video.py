@@ -13,7 +13,7 @@ device = 0 if torch.cuda.is_available() else "cpu"
 print("Running on:", "GPU" if device == 0 else "CPU")
 source="input/dance_1.mp4" # Video input path
 
-result = model.predict(source="dance_2.mp4", stream=True, device=device)
+result = model.predict(source, stream=True, device=device)
 print(f"Result: {result}")
 
 for r in result:
