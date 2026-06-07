@@ -21,8 +21,8 @@ INPUT_DIR = BASE_DIR / "input"
 OUTPUT_DIR = BASE_DIR / "output"
 
 MODELS = {
-    "YOLO11n-Pose": "yolo11n-pose.pt",
-    "YOLO26n-Pose": "yolo26n-pose.pt",
+    "YOLO11n-Pose": "yolo11l-pose.pt",
+    "YOLO26n-Pose": "yolo26l-pose.pt",
 }
 
 DEVICE = "cpu"
