@@ -38,7 +38,7 @@ print("Running on:", "GPU" if device == 0 else "CPU")
 # Bildpfad
 image_path = os.path.join(
     "Beispielbilder",
-    "lhccoutinho-soccer-4275827_1280.jpg"
+    "jumping_woman.jpg"
 )
 
 # Vorhersage
@@ -49,9 +49,9 @@ r = results[0]
 
 #print("raw")
 #print(raw)
-inspect_structure(r)
-#print("einzelnes Attribut")
-print(r.boxes)
+#inspect_structure(r)
+print("--------------------------Keypoints werden hier gezeigt:-------------------------")
+print(r.keypoints.has_visible)
 #print("length:")
 #print(len(raw))
 # Bild mit Pose zeichnen
