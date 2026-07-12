@@ -1,0 +1,5 @@
+model,average_preprocess_ms,average_inference_ms,average_postprocess_ms,standard_deviation_ms,fps_inference_only
+YOLO11n-Pose,4.894,148.994,6.513,18.236,6.712
+YOLO26n-Pose,5.343,175.448,1.292,27.445,5.7
+YOLO11l-Pose,4.904,1032.278,3.385,108.216,0.969
+YOLO26l-Pose,4.811,1037.491,1.248,49.791,0.964

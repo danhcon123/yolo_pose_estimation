@@ -6,7 +6,7 @@ from ultralytics import YOLO
 import cv2, torch
 
 
-model = YOLO("yolo26l-pose.pt")
+model = YOLO("yolo26n-pose.pt")
 # model = YOLO("yolo26n-pose_openvino_model")
 device = 0 if torch.cuda.is_available() else "cpu"
 
