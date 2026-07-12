@@ -37,8 +37,8 @@ print("Running on:", "GPU" if device == 0 else "CPU")
 
 # Bildpfad
 image_path = os.path.join(
-    "Beispielbilder",
-    "jumping_woman.jpg"
+    "input",
+    "running_man.jpg"
 )
 
 # Vorhersage
