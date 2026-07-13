@@ -16,13 +16,13 @@ print(f"Result: {result}")
 
 model = YOLO("yolo26n-pose.pt")
 
-results = model("C:/Users/gauva/Desktop/Oberseminar/docu/pexels-ketut-subiyanto-4853109.jpg")
+results = model("input/running.jpg")
 
 for r in results:
     img = r.plot(
-        kpt_radius=40,   # bigger keypoints
+        kpt_radius= 15,   # bigger keypoints
         kpt_line=True,   # draw skeleton lines
-        line_width= 30    # thicker box/skeleton drawing
+        line_width= 10    # thicker box/skeleton drawing
     )
 
     cv2.imwrite("output_big_keypoints.jpg", img)
