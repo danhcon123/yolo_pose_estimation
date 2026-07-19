@@ -37,7 +37,7 @@ def letterbox(img: np.ndarray, new_size:ImgSize, fill_value: int=0) -> np.ndarra
 
 image_path = os.path.join(
     "Beispielbilder",
-    "jumping_woman.jpg"
+    "laufer_poster.jpg"
     #"lhccoutinho-soccer-4275827_1280.jpg"
 )
 img = cv2.imread(image_path)
